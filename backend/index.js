@@ -9,7 +9,7 @@ mongoDB();
 
 // CORS Middleware
 app.use(cors({
-  origin: 'http://localhost:5173' // React app's origin
+  origin: 'https://food-deployement.vercel.app/' // React app's origin
 }));
 
 // Middleware
