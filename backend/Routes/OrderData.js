@@ -10,8 +10,9 @@ router.post('/orderData', async (req, res) => {
     }
 
     try {
-        let data = order_data;
-        await data.splice(0, 0, { order_date: new Date().toISOString() }); // Use ISO format for date
+        // Add the order date at the start of the array
+        let data = [...order_data]; // Clone to avoid modifying original data
+        data.unshift({ order_date: new Date().toISOString() });
 
         let eId = await Order.findOne({ email });
 
