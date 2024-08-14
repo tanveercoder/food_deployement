@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "vercel-build": "npm run build",  // You can customize this according to your build process
+    "vercel-build": "echo 'No build required for backend'",
     "build": "echo 'No build required for backend'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,6 @@
     "mongoose": "^8.5.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
-    "vite-plugin-svgr": "^4.2.0"
+    "nodemon": "^3.1.4"
   }
 }
