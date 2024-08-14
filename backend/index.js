@@ -9,16 +9,16 @@ mongoDB();
 
 // CORS Middleware
 app.use(cors({
-  origin: 'https://food-deployement.vercel.app' // 
+  origin: 'https://food-deployement.vercel.app' 
 }));
 
 // Middleware
 app.use(express.json()); // For parsing application/json
 
 // Routes
-app.use('/api', require('./Routes/CreateUser.js'));
-app.use('/api', require('./Routes/DisplayData.js'));
-app.use('/api', require('./Routes/OrderData.js'));
+app.use('/api', require('./routes/CreateUser.js'));
+app.use('/api', require('./routes/DisplayData.js'));
+app.use('/api', require('./routes/OrderData.js'));
 
 // Root route
 app.get('/', (req, res) => {
