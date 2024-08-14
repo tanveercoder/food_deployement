@@ -8,7 +8,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post('http://localhost:5000/api/foodData');
+                const response = await axios.post('https://food-deployement-1.onrender.com/api/foodData');
                 const products = response.data[0].map(product => ({
                     ...product,
                     price: Number(product.price) // Ensure price is a number
