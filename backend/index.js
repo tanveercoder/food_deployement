@@ -9,7 +9,7 @@ mongoDB();
 
 // CORS Middleware
 app.use(cors({
-  origin: 'https://food-deployement.vercel.app/' // React app's origin
+  origin: 'https://food-deployement.vercel.app' // 
 }));
 
 // Middleware
@@ -19,9 +19,6 @@ app.use(express.json()); // For parsing application/json
 app.use('/api', require('./Routes/CreateUser.js'));
 app.use('/api', require('./Routes/DisplayData.js'));
 app.use('/api', require('./Routes/OrderData.js'));
-
-
-
 
 // Root route
 app.get('/', (req, res) => {
