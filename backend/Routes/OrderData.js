@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Order = require('../models/Orders'); // Ensure correct path to your model
 
-router.post('/orderData', async (req, res) => {
+router.post('/OrderData', async (req, res) => {
     const { email, order_data } = req.body;
 
     if (!email || !order_data || order_data.length === 0) {
