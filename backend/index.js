@@ -18,7 +18,7 @@ app.use(express.json()); // For parsing application/json
 // Routes
 app.use('/api', require('./Routes/CreateUser.js'));
 app.use('/api', require('./Routes/DisplayData.js'));
-app.use('/api', require('./Routes/orderData.js'));
+app.use('/api', require('./Routes/OrderData.js'));
 
 
 
