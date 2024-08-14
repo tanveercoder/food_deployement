@@ -45,7 +45,7 @@ const Cart = () => {
     };
 
     try {
-      const response = await fetch("https://food-deployement-1.onrender.com//orderData", {
+      const response = await fetch("https://food-deployement-1.onrender.com/orderData", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
