@@ -9,7 +9,7 @@ mongoDB();
 
 // CORS Middleware
 app.use(cors({
-  origin: 'https://food-deployement.vercel.app/' // React app's origin
+  origin: '' // React app's origin
 }));
 
 // Middleware
