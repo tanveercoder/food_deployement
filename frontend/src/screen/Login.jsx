@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/loginuser", { // Update to your login API endpoint
+      const response = await fetch("https://food-deployement-1.onrender.com/api/loginuser", { // Update to your login API endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
