@@ -16,9 +16,9 @@ app.use(cors({
 app.use(express.json()); // For parsing application/json
 
 // Routes
-app.use('/api', require('./Routes/CreateUser'));
-app.use('/api', require('./Routes/DisplayData'));
-app.use('/api', require('./Routes/orderData'));
+app.use('/api', require('./Routes/CreateUser.js'));
+app.use('/api', require('./Routes/DisplayData.js'));
+app.use('/api', require('./Routes/orderData.js'));
 
 
 
