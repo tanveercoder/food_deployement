@@ -53,13 +53,17 @@ const Cart = () => {
         body: JSON.stringify(orderData),
       });
 
-      if (response.status === 200) {
+      const result = await response.json();
+
+      if (response.ok) {
         dispatch({ type: 'CLEAR' });
         navigate('/cart');
       } else {
+        console.error(result.message || "Order failed."); // Improved error logging
         alert("Order failed. Please try again.");
       }
     } catch (error) {
+      console.error("Error placing order:", error); // Improved error logging
       alert("Error placing order. Please try again.");
     }
   };
