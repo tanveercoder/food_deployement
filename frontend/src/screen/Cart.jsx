@@ -31,7 +31,7 @@ const Cart = () => {
 
   const handleCheckout = async () => {
     const userEmail = localStorage.getItem("userEmail");
-
+    
     if (!userEmail) {
       alert("You need to be logged in to place an order.");
       navigate('/login');
@@ -41,29 +41,25 @@ const Cart = () => {
     const orderData = {
       order_data: cartItems,
       email: userEmail,
-      order_date: new Date().toISOString(),
+      order_date: new Date().toISOString()
     };
 
     try {
-      const response = await fetch("https://food-deployement-1.onrender.com/orderData", {
+      const response = await fetch("https://food-deployement.vercel.app/api/orderData", {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(orderData),
+        body: JSON.stringify(orderData)
       });
 
-      const result = await response.json();
-
-      if (response.ok) {
+      if (response.status === 200) {
         dispatch({ type: 'CLEAR' });
         navigate('/cart');
       } else {
-        console.error(result.message || "Order failed."); // Improved error logging
         alert("Order failed. Please try again.");
       }
     } catch (error) {
-      console.error("Error placing order:", error); // Improved error logging
       alert("Error placing order. Please try again.");
     }
   };
@@ -121,7 +117,11 @@ const Cart = () => {
                     onClick={() => handleRemove(item.title)}
                     className="bg-red-600 text-white p-2 rounded-lg hover:bg-red-700 transition-colors"
                   >
-                    🗑️
+                    <img
+                      src="https://cdn2.vectorstock.com/i/1000x1000/01/71/trash-can-icon-vector-13490171.jpg"
+                      alt="Remove"
+                      className="w-5 h-5"
+                    />
                   </button>
                 </div>
               </div>
