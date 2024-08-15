@@ -2,6 +2,8 @@
 
 Welcome to **Hungary Hippo**, a food delivery website built using the **MERN stack** (MongoDB, Express, React, Node.js). This web application allows users to sign up, sign in, browse food items, add items to their cart, and place orders. The order details are stored in the user’s order history for future reference.
 
+You can watch the project in action here: https://youtu.be/jGgd1g2R5GI
+
 You can visit the website here: [Hungary Hippo - Food Delivery Website](https://food-deployement.vercel.app/)
 
 ## **Features**
