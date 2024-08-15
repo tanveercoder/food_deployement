@@ -1,4 +1,4 @@
-**Hungary Hippo - Food Delivery Website**
+#**Hungary Hippo - Food Delivery Website**
 
 Welcome to Hungary Hippo, a food delivery website built using the MERN stack (MongoDB, Express, React, Node.js). This web application allows users to sign up, sign in, browse food items, add items to their cart, and place orders. The order details are stored in the user’s order history for future referebnce.
 
